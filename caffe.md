@@ -96,9 +96,8 @@
         workspace.CreateNet(net_def.SerializeToString())
     
     name = net_def.name
-out_name = net_def.external_output[-1];
-in_name = net_def.external_input[0]
-
+    out_name = net_def.external_output[-1];
+    in_name = net_def.external_input[0]
 
     #%%
     workspace.FeedBlob(in_name, img, device_opts)
